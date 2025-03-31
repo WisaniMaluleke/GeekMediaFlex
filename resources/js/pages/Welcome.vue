@@ -39,7 +39,7 @@ import { Head, Link } from '@inertiajs/vue3';
                 :href="route('register')"
                 class="bg-green-400 text-gray-900 px-6 py-3 rounded-full shadow-md hover:bg-green-500 hover:scale-105 transition-transform"
             >
-                Get Started
+                Request registration
             </Link>
         </section>
 
@@ -59,29 +59,8 @@ import { Head, Link } from '@inertiajs/vue3';
             </div>
         </section>
 
-        <!-- How It Works -->
-        <section class="p-10 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
-            <div class="max-w-4xl mx-auto space-y-6">
-                <h2 class="text-center text-2xl font-bold">🚀 How It Works</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                    <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">1. Sign Up</h3>
-                        <p class="text-sm">Create an account to unlock premium features.</p>
-                    </div>
-                    <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">2. Explore</h3>
-                        <p class="text-sm">Discover trending content and create your own playlists.</p>
-                    </div>
-                    <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">3. Enjoy</h3>
-                        <p class="text-sm">Stream seamlessly on any device, anytime.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Footer -->
-        <footer class="text-center p-6 text-sm bg-black text-gray-300">
+        <footer class="text-center p-6 text-sm text-gray-300">
             &copy; 2025 GeekMediaFlex. All rights reserved.
         </footer>
 
