@@ -31,27 +31,50 @@ const footerNavItems: NavItem[] = [
 </script>
 
 <template>
-    <Sidebar collapsible="icon" variant="inset">
+    <Sidebar collapsible="icon" variant="inset" class="flex flex-col w-64 gap-6 p-6 bg-gray-800 border-r border-gray-700">
+
+        <!-- Sidebar Header -->
         <SidebarHeader>
             <SidebarMenu>
                 <SidebarMenuItem>
                     <SidebarMenuButton size="lg" as-child>
-                        <Link :href="route('dashboard')">
+                        <Link :href="route('dashboard')" class="flex items-center gap-3">
                             <AppLogo />
+                            <h1 class="text-xl font-semibold text-white">GeekMediaFlex</h1>
                         </Link>
                     </SidebarMenuButton>
                 </SidebarMenuItem>
             </SidebarMenu>
         </SidebarHeader>
 
+        <!-- Sidebar Content -->
         <SidebarContent>
-            <NavMain :items="mainNavItems" />
+            <nav class="flex flex-col gap-4">
+                <Link href="/dashboard" class="flex items-center gap-3 p-2 text-white rounded-lg hover:bg-gray-700">
+                    📊 Dashboard
+                </Link>
+                <Link href="/music" class="flex items-center gap-3 p-2 text-white rounded-lg hover:bg-gray-700">
+                    🎵 Music
+                </Link>
+                <Link href="/videos" class="flex items-center gap-3 p-2 text-white rounded-lg hover:bg-gray-700">
+                    🎬 Videos
+                </Link>
+                <Link href="/playlists" class="flex items-center gap-3 p-2 text-white rounded-lg hover:bg-gray-700">
+                    📁 Playlists
+                </Link>
+                <Link href="/settings" class="flex items-center gap-3 p-2 text-white rounded-lg hover:bg-gray-700">
+                    ⚙️ Settings
+                </Link>
+            </nav>
         </SidebarContent>
 
+        <!-- Sidebar Footer -->
         <SidebarFooter>
             <NavFooter :items="footerNavItems" />
             <NavUser />
         </SidebarFooter>
+
     </Sidebar>
+
     <slot />
 </template>
