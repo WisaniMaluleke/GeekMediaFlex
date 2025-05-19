@@ -13,7 +13,7 @@ seed:
 	php artisan db:seed
 
 migrate:
-	docker exec geekmediaflex-laravel.test-1 bash -c "php artisan migrate:fresh --seed"
+	docker exec geekmediaflex_laravel.test_1 bash -c "php artisan migrate:fresh --seed"
 
 clear:
 	php artisan optimize:clear
@@ -21,10 +21,10 @@ clear:
 permissions:
 	chmod 777 ~/Projects/GeekMediaFlex && sudo chown wislim:wislim ~/Projects/GeekMediaFlex
 storagelink:
-	docker exec geekmediaflex-laravel.test-1 bash -c "php artisan storage:link"
+	docker exec geekmediaflex_laravel.test_1 bash -c "php artisan storage:link"
 storagePermission:
 	sudo chmod -R 777 storage
 con:
-	docker exec -ti geekmediaflex-laravel.test-1 bash
+	docker exec -ti geekmediaflex_laravel.test_1 bash
 stan:
 	./vendor/bin/phpstan analyse
